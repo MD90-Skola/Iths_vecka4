@@ -5,7 +5,7 @@ public class Main {
 
         //följande 2 rader skapar samma värde /5/
 
-
+        // https://www.youtube.com/watch?v=4GTo4Mcbnj4  / vecka 4 lektion 1
 
         int nr = createNumber();
         int nr2 = 5;
