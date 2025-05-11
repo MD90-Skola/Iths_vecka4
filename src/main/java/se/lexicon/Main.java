@@ -11,15 +11,35 @@ public class Main {
 
 
 
-        System.out.println("välkommen till plussa på. skriv in 3st heltal så skriver jag ut summan av dom");
+        System.out.println("välkommen till plussa på. skriv in heltal så skriver jag ut summan av dom");
+        System.out.println("skriv in 0 när du vill avsluta");
 
         int sum = 0; // måste vara utanför for loopen annars så kan den inte spara
 
-        for (int i = 0; i<3; i++){
 
+        boolean exitProgram = false;
+
+        while (exitProgram == false){
+            int input = sc.nextInt();
+
+            if(input == 0){
+                exitProgram = true;
+                System.out.println("summan av alla dina tal: "+ sum);
+            }else {
+                sum = add(sum, input);
+            }
+
+
+
+
+
+/*        for (int i = 0; i<3; i++){
             int input = sc.nextInt();
             sum = add(sum, input);
-            System.out.println("värdet på sum: "+sum );
+            System.out.println("värdet på sum: "+sum );*/
+
+
+
 
           // sum = add(sum, input);   // här raderas koden ifrån datorns minne
         }
