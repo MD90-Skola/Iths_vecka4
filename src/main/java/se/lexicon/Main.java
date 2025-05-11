@@ -1,60 +1,37 @@
+
 package se.lexicon;
+
+// https://www.youtube.com/watch?v=_yOoQE_S5g0&t=2s vecka 4 lektion 2
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        //följande 2 rader skapar samma värde /5/
-
-
-
-        int nr = createNumber();
-        int nr2 = 5;
-        System.out.println("värde på nummer 1:  " + nr);
-        System.out.println("värde på nummer 2:  " + nr2);
-
-        String greeting = "hej och välommen";
-        String greeting2 = createGreeting();
-
-        System.out.println("värdet på greeting: " + greeting);
-        System.out.println("värdet på greeting 2: " + greeting2);
-
-        boolean compare1 = nr > nr2;
-        boolean compare2 = isGreaterThan(nr, nr2);
-        System.out.println("värdet på compare1: " + compare1);
-        System.out.println("värdet på compare2: " + compare2);
-
-        numberOne();
-
-    }
-
-    static void numberOne(){
-        System.out.println("nu körs metod 1");
-        numberTwo("Michel");
-    }
-
-    static void numberTwo(String name){
-        System.out.println("hej " + name + ". nu körs metod2");
-
-    }
+        Scanner sc = new Scanner(System.in);
 
 
 
-    static int createNumber() {
-        System.out.println("nu körs createNumber");
-        int createNumber = 5;
-        return createNumber;
-    }
+        System.out.println("välkommen till plussa på. skriv in 3st heltal så skriver jag ut summan av dom");
 
-    static String createGreeting() {
-        String createGreeting = "hej och välkommen";
-        return createGreeting;
-    }
+        int sum = 0; // måste vara utanför for loopen annars så kan den inte spara
 
-    static boolean isGreaterThan(int nr1, int nr2) {
-        if (nr1 > nr2) {
-            return true;  // Om nr1 är större än nr2, returnera true
-        } else {
-            return false; // Annars false
+        for (int i = 0; i<3; i++){
+
+            int input = sc.nextInt();
+            sum = add(sum, input);
+            System.out.println("värdet på sum: "+sum );
+
+          // sum = add(sum, input);   // här raderas koden ifrån datorns minne
         }
+       // System.out.println("vädet av dina 3 heltal: "+ sum);
+
     }
+
+    static int add(int nr1, int nr2) {
+        int result = nr1 + nr2;
+        return result;
+
+    }
+
+
 }
